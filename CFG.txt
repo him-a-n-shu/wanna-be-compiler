@@ -1,0 +1,62 @@
+Assignment submitted by:
+
+Name: HIMANSHU
+Student ID: 2023UCS0092
+
+Name: Karan Singla
+Student ID: 2023UCS0097
+
+============================================================================================
+
+ListComp         → "[" Expression ForClause IfClauseListOpt "]"
+ForClause        → "for" Target "in" Expression
+IfClauseListOpt  → IfClause IfClauseListOpt | ε
+IfClause         → "if" Expression
+Target           → ID
+Expression       → Term ExpressionPrime
+ExpressionPrime  → OPERATOR Term ExpressionPrime | ε
+Term             → Factor
+Factor           → (ID | BUILTIN) FunctionCallOpt 
+                 |  INTEGER 
+                 |  DECIMAL 
+                 |  STRING 
+                 |  "(" Expression ")"
+FunctionCallOpt  → "(" ArgListOpt ")" | ε
+ArgListOpt       → Expression ("," Expression)* | ε
+
+============================================================================================
+
+Non-Terminals:
+
+ListComp
+ForClause
+IfClauseListOpt
+IfClause
+Target
+Expression
+ExpressionPrime
+Term
+Factor
+FunctionCallOpt
+ArgListOpt
+
+============================================================================================
+
+Terminals:
+
+[
+]
+for
+in
+if
+ID
+BUILTIN
+INTEGER
+DECIMAL
+STRING
+OPERATOR
+(
+)
+,
+
+============================================================================================
